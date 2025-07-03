@@ -1,5 +1,9 @@
 package ar.com.parcialUno;
 
+import ar.com.parcialUno.model.pets.Dog;
+import ar.com.parcialUno.model.Pet;
+import ar.com.parcialUno.model.pets.states.ManagerSpecialCares;
+import ar.com.parcialUno.model.pets.states.SpecialCares;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

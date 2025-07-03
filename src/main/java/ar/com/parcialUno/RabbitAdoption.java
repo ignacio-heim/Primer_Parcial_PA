@@ -1,5 +1,10 @@
 package ar.com.parcialUno;
 
+import ar.com.parcialUno.model.people.Adoptant;
+import ar.com.parcialUno.model.adoptions.Adoption;
+import ar.com.parcialUno.model.people.Employee;
+import ar.com.parcialUno.model.Pet;
+
 import java.time.LocalDate;
 
 public class RabbitAdoption extends Adoption {

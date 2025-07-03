@@ -1,4 +1,6 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.model.pets.states;
+
+import ar.com.parcialUno.model.Pet;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,7 @@
 package ar.com.parcialUno;
 
+import ar.com.parcialUno.model.Pet;
+
 import java.util.*;
 import java.util.stream.Collectors;
 

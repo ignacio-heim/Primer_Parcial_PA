@@ -1,4 +1,4 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.model.people;
 
 abstract class Person {
 

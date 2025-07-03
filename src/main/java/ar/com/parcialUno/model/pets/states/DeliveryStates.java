@@ -1,11 +1,13 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.model.pets.states;
+
+import ar.com.parcialUno.model.Pet;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EstadoDelivery {
+public class DeliveryStates {
     private List<InterfaceState> interfaceStates;
-    public EstadoDelivery() {
+    public DeliveryStates() {
         interfaceStates = new ArrayList<>();
         this.interfaceStates.add(new Healthy());
         this.interfaceStates.add(new SpecialCares());

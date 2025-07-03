@@ -1,5 +1,7 @@
 package ar.com.parcialUno;
 
+import ar.com.parcialUno.model.adoptions.Adoption;
+
 import java.time.LocalDate;
 
 public class PrintAdoptionTicket implements InterfaceAdoptationTicket {

@@ -1,6 +1,8 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.model.pets;
 
-public class Cat extends Pet{
+import ar.com.parcialUno.Pet;
+
+public class Cat extends Pet {
 
     public Cat(String aName, String aBirthDate, Double aWeight, String aSpecie) {
         super(aName, aBirthDate, aWeight, aSpecie);

@@ -1,8 +1,8 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.model.pets;
 
-import java.time.LocalDate;
+import ar.com.parcialUno.Pet;
 
-public class Dog extends Pet{
+public class Dog extends Pet {
 
     public Dog(String aName, String aBirthDate, Double aWeight, String aSpecie) {
         super(aName, aBirthDate, aWeight, aSpecie);

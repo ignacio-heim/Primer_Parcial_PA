@@ -1,4 +1,6 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.model.people;
+
+import ar.com.parcialUno.Person;
 
 public class Employee extends Person {
 

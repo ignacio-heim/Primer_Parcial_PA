@@ -1,9 +1,10 @@
 package ar.com.parcialUno;
 
+import ar.com.parcialUno.model.adoptions.Adoption;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class ManagerAdoption {
     private List<Adoption> adoptions;

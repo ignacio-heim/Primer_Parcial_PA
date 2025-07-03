@@ -1,8 +1,9 @@
 package ar.com.parcialUno;
 
+import ar.com.parcialUno.model.people.Adoptant;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ManagerAdoptans {
 

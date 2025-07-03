@@ -1,7 +1,7 @@
 package ar.com.parcialUno;
 
+import ar.com.parcialUno.model.people.Adoptant;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

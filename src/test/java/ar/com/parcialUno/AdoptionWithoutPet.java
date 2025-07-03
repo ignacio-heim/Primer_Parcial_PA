@@ -1,5 +1,12 @@
 package ar.com.parcialUno;
 
+import ar.com.parcialUno.model.adoptions.Adoption;
+import ar.com.parcialUno.model.adoptions.CatAdoption;
+import ar.com.parcialUno.model.adoptions.DogAdoption;
+import ar.com.parcialUno.model.people.Adoptant;
+import ar.com.parcialUno.model.people.Employee;
+import ar.com.parcialUno.model.pets.Cat;
+import ar.com.parcialUno.model.pets.Dog;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

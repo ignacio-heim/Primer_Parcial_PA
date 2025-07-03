@@ -1,5 +1,11 @@
 package ar.com.parcialUno;
 
+import ar.com.parcialUno.model.adoptions.Adoption;
+import ar.com.parcialUno.model.adoptions.DogAdoption;
+import ar.com.parcialUno.model.people.Adoptant;
+import ar.com.parcialUno.model.people.Employee;
+import ar.com.parcialUno.model.pets.Dog;
+
 import java.time.LocalDate;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or

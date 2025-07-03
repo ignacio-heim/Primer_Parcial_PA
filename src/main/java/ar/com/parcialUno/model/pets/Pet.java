@@ -1,4 +1,10 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.model.pets;
+
+import ar.com.parcialUno.*;
+import ar.com.parcialUno.model.exepctions.PetExceptrion;
+import ar.com.parcialUno.model.pets.states.DeliveryStates;
+import ar.com.parcialUno.model.pets.states.Healthy;
+import ar.com.parcialUno.model.pets.states.InterfaceState;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +16,7 @@ abstract class Pet extends Contain {
     private Double weight;
     private String specie;
     private List<String> cares;
-    private EstadoDelivery delivery;
+    private DeliveryStates delivery;
     private InterfaceState state;
     boolean belongToVete;
 
@@ -61,7 +67,7 @@ abstract class Pet extends Contain {
     }
 
     public void jugar() {
-        EstadoDelivery ed = new EstadoDelivery();
+        DeliveryStates ed = new DeliveryStates();
         ed.obtenerEstado(this).quiereJugar();
     }
 

@@ -1,6 +1,6 @@
 package ar.com.parcialUno.model.adoptions;
 
-import ar.com.parcialUno.Pet;
+import ar.com.parcialUno.model.pets.Pet;
 import ar.com.parcialUno.model.exepctions.PetExceptrion;
 import ar.com.parcialUno.PrintAdoptionTicket;
 import ar.com.parcialUno.model.exepctions.AdoptionExceptions;

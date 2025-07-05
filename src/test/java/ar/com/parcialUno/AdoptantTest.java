@@ -15,8 +15,8 @@ public class AdoptantTest {
         // Given
         ManagerAdoptans adoptants = new ManagerAdoptans();
         boolean adopts = adoptants.isEmpty();
-        Adoptant anAdoptant = new Adoptant("Juan", 20, "Rivadavia 1307");
-        Adoptant anAdoptant2 = new Adoptant("Ana", 20, "Rivadavia 1307");
+        Adoptant anAdoptant = new Adoptant("Juan", "Perez",20, "Rivadavia 1307");
+        Adoptant anAdoptant2 = new Adoptant("Ana", "Perez",20, "Rivadavia 1307");
         adoptants.addAdoptant(anAdoptant);
         adoptants.addAdoptant(anAdoptant2);
 

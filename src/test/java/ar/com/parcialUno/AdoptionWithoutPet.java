@@ -7,6 +7,7 @@ import ar.com.parcialUno.model.people.Adoptant;
 import ar.com.parcialUno.model.people.Employee;
 import ar.com.parcialUno.model.pets.Cat;
 import ar.com.parcialUno.model.pets.Dog;
+import ar.com.parcialUno.model.pets.Pet;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,8 +21,8 @@ public class AdoptionWithoutPet {
     public void adoptPet() {
         // Given
         ManagerAdoption adoptions = new ManagerAdoption();
-        Employee myEmployee = Employee.getInstance("Ignacio", 34, "assistant");
-        Adoptant myAdoptant = new Adoptant("Josefina", 33, "Rep. Dominica 3366");
+        Employee myEmployee = Employee.getInstance("Ignacio", "Perez",34, "assistant");
+        Adoptant myAdoptant = new Adoptant("Josefina", "Perez",33, "Rep. Dominica 3366");
         Pet miPet = new Dog("Vitto", "2020-01-01", 14.3, "dog");
         Pet miPet2 = new Cat("Sol", "2024-03-13", 4.3, "cat");
         //Pet miPet3 = new Cat("Luna", "2020-01-01", 14.3, "cat");

@@ -1,6 +1,6 @@
 package ar.com.parcialUno.model.pets;
 
-import ar.com.parcialUno.Pet;
+import ar.com.parcialUno.model.pets.Pet;
 
 public class Cat extends Pet {
 

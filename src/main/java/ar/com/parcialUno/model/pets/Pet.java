@@ -1,6 +1,6 @@
 package ar.com.parcialUno.model.pets;
 
-import ar.com.parcialUno.*;
+
 import ar.com.parcialUno.model.exepctions.PetExceptrion;
 import ar.com.parcialUno.model.pets.states.DeliveryStates;
 import ar.com.parcialUno.model.pets.states.Healthy;
@@ -9,7 +9,7 @@ import ar.com.parcialUno.model.pets.states.InterfaceState;
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class Pet extends Contain {
+public abstract class Pet extends Contain {
 
     private String name;
     private String birthDate;

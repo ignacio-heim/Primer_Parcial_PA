@@ -13,8 +13,8 @@ public class AverageAgeAdoptantTest {
         // Given
         ManagerAdoptans adoptants = new ManagerAdoptans();
         boolean adopts = adoptants.isEmpty();
-        Adoptant anAdoptant = new Adoptant("Juan", 20, "Rivadavia 1307");
-        Adoptant anAdoptant2 = new Adoptant("Ana", 25, "Rivadavia 1307");
+        Adoptant anAdoptant = new Adoptant("Juan", "Perez",20, "Rivadavia 1307");
+        Adoptant anAdoptant2 = new Adoptant("Ana", "Perez",25, "Rivadavia 1307");
         adoptants.addAdoptant(anAdoptant);
         adoptants.addAdoptant(anAdoptant2);
 

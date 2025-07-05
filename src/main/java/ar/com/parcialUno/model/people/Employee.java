@@ -1,20 +1,18 @@
 package ar.com.parcialUno.model.people;
 
-import ar.com.parcialUno.Person;
-
 public class Employee extends Person {
 
     private static Employee instance;
     private String aCharge;
 
-    private Employee(String aName, Integer anAge, String aCharge) {
-        super(aName, anAge);
+    public Employee(String aName, String alastName, Integer anAge, String aCharge) {
+        super(aName, alastName, anAge);
         this.aCharge = aCharge;
     }
 
-    public static Employee getInstance(String aName, Integer anAge, String aCharge) {
+    public static Employee getInstance(String aName, String aLastName, Integer anAge, String aCharge) {
         if (instance == null) {
-            instance = new Employee(aName,anAge, aCharge);
+            instance = new Employee(aName,aLastName,anAge ,aCharge);
         }
         return instance;
     }

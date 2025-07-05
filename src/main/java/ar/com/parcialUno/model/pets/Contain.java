@@ -1,6 +1,6 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.model.pets;
 
-class Contain {
+public class Contain {
     public boolean isAnimal() {
         return false;
     }

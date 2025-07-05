@@ -1,42 +1,23 @@
 package ar.com.parcialUno;
 
-import ar.com.parcialUno.model.adoptions.Adoption;
-import ar.com.parcialUno.model.adoptions.DogAdoption;
+import ar.com.parcialUno.DAO.DAO;
 import ar.com.parcialUno.model.people.Adoptant;
 import ar.com.parcialUno.model.people.Employee;
-import ar.com.parcialUno.model.pets.Dog;
+import ar.com.parcialUno.DAO.emplyoeeDAO.EmployeeDAOH2Impl;
+import ar.com.parcialUno.views.Form;
 
-import java.time.LocalDate;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
+
     public static void main(String[] args) {
 
-        Employee myEmployee = Employee.getInstance("Ignacio", 34, "assistant");
+        Form form = new Form();
 
-        Adoptant myAdoptant = new Adoptant("Josefina", 19, "Rep. Dominica 3366");
-
-        Pet miPet = new Dog("Vitto", "2020-01-01", 14.3, "dog");
-        Pet miPet2 = new Dog("Vitto", "2020-01-01", 14.3, "dog");
-
-        miPet.addCare("Alimentar dos veces por dia");
-        miPet.addCare("Sacar a pasar dos veces por dia");
-
-        Adoption miAdoption = new DogAdoption(myEmployee, myAdoptant, miPet, LocalDate.of(2023,10,29));
-        miAdoption.procesarAdopcion();
-        // ManagerAdoption managerAdoption = new ManagerAdoption();
-        // managerAdoption.addAdoption(miAdoption);
-        // System.out.println(managerAdoption.last30daysAdoptions());
-
-        //System.out.println(miAdoption.toString());
-
-        //Container<Pet> misMascotas = new Container();
-
-        //misMascotas.addContaing(miPet);
-
-        //System.out.println(misMascotas.hasAnAnimal());
-
+        //Employee employee = new Employee("Ignacio", "Heim", 34, "Asistente");
+        //DAO dao = new EmployeeDAOH2Impl();
+        //dao.create(employee);
+        //System.out.println(dao.getAll());
 
     }
 }

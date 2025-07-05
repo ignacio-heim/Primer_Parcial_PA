@@ -1,14 +1,13 @@
 package ar.com.parcialUno.model.people;
 
-import ar.com.parcialUno.Person;
 import ar.com.parcialUno.model.exepctions.AdoptionExceptions;
 
 public class Adoptant extends Person {
 
     private String adress;
 
-    public Adoptant(String aName, Integer anAge, String anAdress) {
-        super(aName, anAge);
+    public Adoptant(String aName, String aLastName, Integer anAge, String anAdress) {
+        super(aName, aLastName ,anAge);
         this.adress = anAdress;
     }
 

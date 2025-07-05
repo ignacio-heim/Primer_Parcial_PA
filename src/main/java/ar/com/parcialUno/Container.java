@@ -1,5 +1,7 @@
 package ar.com.parcialUno;
 
+import ar.com.parcialUno.model.pets.Contain;
+
 import java.util.ArrayList;
 import java.util.List;
 

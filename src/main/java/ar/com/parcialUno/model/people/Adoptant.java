@@ -29,6 +29,6 @@ public class Adoptant extends Person {
 
     @Override
     public String toString() {
-        return "Adoptant: \n" + "\tName: " +this.getName() + ". Age " + this.getAge();
+        return "Adoptante: " +this.getName() + " "+ this.getLastName() + ". Age " + this.getAge();
     }
 }

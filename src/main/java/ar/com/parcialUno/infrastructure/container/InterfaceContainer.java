@@ -1,4 +1,4 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.infrastructure.container;
 
 public interface InterfaceContainer<T> {
 

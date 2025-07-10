@@ -2,7 +2,7 @@ package ar.com.parcialUno.model.adoptions;
 
 import ar.com.parcialUno.model.pets.Pet;
 import ar.com.parcialUno.model.exepctions.PetExceptrion;
-import ar.com.parcialUno.PrintAdoptionTicket;
+import ar.com.parcialUno.infrastructure.ticket.PrintAdoptionTicket;
 import ar.com.parcialUno.model.exepctions.AdoptionExceptions;
 import ar.com.parcialUno.model.people.Adoptant;
 import ar.com.parcialUno.model.people.Employee;
@@ -11,20 +11,21 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Adoption {
+public class Adoption {
 
     private Employee anEmployee;
     private Adoptant anAdoptant;
     private Pet aPet;
     public LocalDate adoptationDate;
+
     private List<String> pasosEjecutados = new ArrayList<>();
     private PrintAdoptionTicket ticket = new PrintAdoptionTicket(this);
 
-    public Adoption(Employee anEmployee, Adoptant anAdoptant, Pet aPet, LocalDate aDate) {
+    public Adoption(Employee anEmployee, Adoptant anAdoptant, Pet aPet) {
         this.anEmployee = anEmployee;
         this.anAdoptant = anAdoptant;
         this.aPet = aPet;
-        this.adoptationDate = aDate;
+        this.adoptationDate = LocalDate.now();
     }
 
     protected void registerData(String mensaje) {
@@ -38,6 +39,7 @@ public abstract class Adoption {
     public String getNameAdoptant() {
         return anAdoptant.getName();
     }
+    public String getLastName() { return anAdoptant.getLastName(); }
     public Integer getAgeAdoptant() {
         return anAdoptant.getAge();
     }
@@ -61,13 +63,14 @@ public abstract class Adoption {
         return aPet.getWeight();
     }
 
-    public String getSpeciePet() {
+    public Integer getSpeciePet() {
         return aPet.getSpecie();
     }
 
+    /*
     public StringBuilder getCaresPet() {
         return aPet.getCares();
-    }
+    }*/
 
     public String getNameEmployee() {
         return anEmployee.getName();
@@ -98,14 +101,14 @@ public abstract class Adoption {
             registrarDatosAdoptante();
             registrarEmpleado();
             guardarDatosMascota();
-            verificarVacunas();
-            ofrecerRecomendaciones();
+            //verificarVacunas();
+            //ofrecerRecomendaciones();
             generarTicketFinal();
             ticket.printTicket();
         } catch (AdoptionExceptions | PetExceptrion e) {
-            System.out.println("Ups, there is something wrong: " + e.getMessage());
+            System.out.println("Ups, algo salió mal: " + e.getMessage());
         } catch (Exception e) {
-            System.out.println("Unexpected error: " + e.getMessage());
+            System.out.println("Error inesperado: " + e.getMessage());
         }
     }
 
@@ -127,8 +130,9 @@ public abstract class Adoption {
         System.out.println("Generando ticket final...");
     }
 
+    /*
     protected abstract void verificarVacunas();
     protected abstract void ofrecerRecomendaciones();
-
+    */
 
 }

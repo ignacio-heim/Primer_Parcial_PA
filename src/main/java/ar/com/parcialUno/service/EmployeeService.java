@@ -8,28 +8,32 @@ import java.util.List;
 
 public class EmployeeService {
 
-    private DAO employeeDAO = new EmployeeDAOH2Impl();
+    private EmployeeDAOH2Impl employeeDAO;
 
-    public void insertEmployee(String firstName, String lastName, int age, String charge) {
-        if(firstName == null || lastName == null) {
+    public EmployeeService() {
+        this.employeeDAO = new EmployeeDAOH2Impl();
+    }
+
+
+    public void insertEmployee(Employee anEmployee) {
+        if(anEmployee.getName() == null || anEmployee.getName() == null) {
             throw new IllegalArgumentException("Nombre del empleado no puede estar vacio");
         }
-        Employee employee = new Employee(firstName, lastName, age, charge);
-        employeeDAO.create(employee);
+        employeeDAO.create(anEmployee);
     }
 
-    public void updateEmployee(Integer id, Employee employee) {
+    public void updateEmployee(Integer id, Employee anEmployee) {
         if(id == null || id < 0) {
             throw new IllegalArgumentException("Id invalido");
         }
-        employeeDAO.update(id, employee);
+        employeeDAO.update(id, anEmployee);
     }
 
-    public void deleteEmployee(Integer id, Employee employee) {
+    public void deleteEmployee(Integer id) {
         if(id == null || id < 0) {
             throw new IllegalArgumentException("Id invalido");
         }
-        employeeDAO.delete(id, employee);
+        employeeDAO.delete(id);
     }
 
     public Employee getEmployeeById(Integer id) {
@@ -45,7 +49,36 @@ public class EmployeeService {
             throw new IllegalArgumentException("No employees");
         }
         return employees;
+    }
 
+    public Integer getEmployeeId(Employee anEmployee) {
+        if(anEmployee == null) {
+            throw new IllegalArgumentException("Nombre del empleado no puede estar vacio");
+        }
+        return employeeDAO.getId(anEmployee);
+    }
+
+
+    public Employee getEmployeeByEmail(String email) {
+        if(email == null || email.isEmpty()) {
+            throw new IllegalArgumentException("No register user.");
+        }
+        return (Employee) employeeDAO.getEmployeeByEmail(email);
+    }
+
+    public Employee loginEmployee(String email, String password) {
+        if(email == null || email.isEmpty() || password == null || password.isEmpty()) {
+            throw new IllegalArgumentException("Email and password are required");
+        }
+        Employee employee = employeeDAO.getEmployeeByEmail(email);
+        if(!employee.getEmail().equals(email)) {
+            throw new IllegalArgumentException("Invalid credentials emial");
+        }
+        if (!employee.getPassword().equals(password)) {
+            throw new IllegalArgumentException("Invalid credentials password");
+        }
+        //System.out.println("User " + employee.getName() + " " + employee.getLastName() + " succesfully logged in");
+        return employee;
     }
 
 }

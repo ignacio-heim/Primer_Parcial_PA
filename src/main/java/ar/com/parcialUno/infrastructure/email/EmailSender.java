@@ -1,4 +1,4 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.infrastructure.email;
 
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
@@ -6,7 +6,7 @@ import jakarta.mail.internet.MimeMessage;
 
 import java.util.Properties;
 
-public class EmailSender implements InterfaceEmailSender{
+public class EmailSender implements InterfaceEmailSender {
 
     @Override
     public void sendEmail(String to, String subject, String body) {

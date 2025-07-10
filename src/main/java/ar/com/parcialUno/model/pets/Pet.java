@@ -9,17 +9,18 @@ import ar.com.parcialUno.model.pets.states.InterfaceState;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Pet extends Contain {
+public class Pet {
 
     private String name;
     private String birthDate;
     private Double weight;
-    private String specie;
+    private Integer specie;
     private List<String> cares;
     private DeliveryStates delivery;
     private InterfaceState state;
     boolean belongToVete;
 
+    /*
     public Pet(String aName, String aBirthDate, Double aWeight, String aSpecie) {
         this.name = aName;
         this.birthDate=aBirthDate;
@@ -27,6 +28,15 @@ public abstract class Pet extends Contain {
         this.specie=aSpecie;
         this.state=new Healthy();
         this.cares = new ArrayList<>();
+        this.belongToVete=true;
+    }*/
+
+    public Pet(String name, String birthDate, Double weight, Integer specie) {
+        this.name = name;
+        this.birthDate=birthDate;
+        this.weight=weight;
+        this.specie=specie;
+        this.state=new Healthy();
         this.belongToVete=true;
     }
 
@@ -42,7 +52,7 @@ public abstract class Pet extends Contain {
         return weight;
     }
 
-    public String getSpecie() {
+    public Integer getSpecie() {
         return this.specie;
     }
 
@@ -66,12 +76,16 @@ public abstract class Pet extends Contain {
         this.state = aEstado;
     }
 
+    public Integer getSpecieID() {
+        return this.specie;
+    }
+
     public void jugar() {
         DeliveryStates ed = new DeliveryStates();
         ed.obtenerEstado(this).quiereJugar();
     }
+    //@Override
 
-    @Override
     public boolean isAnimal() {
         return true;
     }
@@ -84,14 +98,6 @@ public abstract class Pet extends Contain {
 
     @Override
     public String toString() {
-        return "Pet{" +
-                "name='" + name + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                ", weight=" + weight +
-                ", specie='" + specie + '\'' +
-                ", cares=" + cares +
-                ", delivery=" + delivery +
-                ", state=" + state +
-                '}';
+        return "Mascota: " + name +", Cumpleaños: " + birthDate + ", Peso: " + weight;
     }
 }

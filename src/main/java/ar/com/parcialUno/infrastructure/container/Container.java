@@ -1,11 +1,11 @@
-package ar.com.parcialUno;
+package ar.com.parcialUno.infrastructure.container;
 
 import ar.com.parcialUno.model.pets.Contain;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Container<T extends Contain> implements InterfaceContainer<T>{
+public class Container<T extends Contain> implements InterfaceContainer<T> {
 
     private List<T> container;
 
@@ -44,8 +44,6 @@ public class Container<T extends Contain> implements InterfaceContainer<T>{
     public boolean hasAThing() {
         return obteainContaing(0).isAnimal();
     }
-
-
 
 
 }

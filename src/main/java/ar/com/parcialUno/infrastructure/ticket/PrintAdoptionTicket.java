@@ -25,7 +25,7 @@ public class PrintAdoptionTicket implements InterfaceAdoptationTicket {
                 "\n \tNombre: " + anAdoption.getNamePet()+
                 "\n \tCumpleaños: "+anAdoption.getBirthdayPet()+
                 "\n \tPeso: "+anAdoption.getWeightPet()+
-                "\n \tEspecia: "+anAdoption.getSpeciePet()+
+                "\n \tEspecie: "+anAdoption.getSpeciePet()+
                 //"\n \tCares recommendation: \n"+anAdoption.getCaresPet()+
                 "\n"+
                 "\n Datos del Empleado: "+

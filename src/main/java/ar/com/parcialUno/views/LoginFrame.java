@@ -59,6 +59,9 @@ public class LoginFrame extends JFrame {
 
             Employee employee = ec.getEmployeeByEmail(email);
 
+            if (employee == null) {
+                JOptionPane.showMessageDialog(null, "Correo no registrado", "Error", JOptionPane.ERROR_MESSAGE);
+            }
 
             employee = ec.login(employee.getEmail(), password);
 

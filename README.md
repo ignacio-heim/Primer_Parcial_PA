@@ -34,20 +34,27 @@ Finalmente, el usuario tiene la posibilida de descargar el ticket de la adopció
 
 ![img_1.png](img_1.png)
 3. Ingreso denegado
+
 ![img_3.png](img_3.png)
+
 ![img_5.png](img_5.png)
 
 4. Registrar adopcion
+
 ![img_2.png](img_2.png)
 
 5. Elegir mascota y adoptante
+
 ![img_6.png](img_6.png)
 
 6. Confirmar adopcion
+
 ![img_7.png](img_7.png)
 
 7. Descargar ticket adopción
+
 ![img_8.png](img_8.png)
 
 8. PDF descargado
+
 ![img_9.png](img_9.png)

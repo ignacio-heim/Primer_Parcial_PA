@@ -34,6 +34,7 @@ public class EmployeeDAOH2Impl implements DAO<Employee>, EmployeeLogin, Employee
 
     @Override
     public void create(Employee employee) {
+
         try {
             Connection conn = H2Connection.getConnection();
             String createEmployee = "INSERT INTO " + table + "(name, lastname, age, charge, email, password) " +
@@ -110,7 +111,7 @@ public class EmployeeDAOH2Impl implements DAO<Employee>, EmployeeLogin, Employee
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                System.out.println(rs.getString("name"));
+                //System.out.println(rs.getString("name"));
                 String name = rs.getString("name");
                 String lastName = rs.getString("lastname");
                 int age = rs.getInt("age");

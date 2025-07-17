@@ -64,4 +64,13 @@ public class PetController {
         return null;
     }
 
+    public List<Pet> getAllAdoptations() {
+        try {
+            return petService.getAllAdoptations();
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

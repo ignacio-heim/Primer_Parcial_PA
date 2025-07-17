@@ -1,6 +1,7 @@
 package ar.com.parcialUno.service;
 
 import ar.com.parcialUno.DAO.petDAO.PetDAOH2Impl;
+import ar.com.parcialUno.model.people.Adoptant;
 import ar.com.parcialUno.model.pets.Pet;
 
 import java.util.List;
@@ -46,6 +47,13 @@ public class PetService {
             throw new IllegalArgumentException("No hay mascotas en la base de datos");
         }
         return petDAO.getAll();
+    }
+
+    public List<Pet> getAllAdoptations() {
+        if(petDAO == null) {
+            throw new IllegalArgumentException("No hay mascotas en la base de datos");
+        }
+        return petDAO.getAllAdoptations();
     }
 
     public Integer getIdPet(Pet aPet) {

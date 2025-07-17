@@ -16,7 +16,7 @@ public class EmployeeController {
     public void saveEmployee(Employee anEmployee) {
         try {
             employeeService.insertEmployee(anEmployee);
-//            System.out.println("El empleado "+ anEmployee.getName() + " " + anEmployee.getLastName()+" se ha guardado correctamente");
+            System.out.println("El empleado "+ anEmployee.getName() + " " + anEmployee.getLastName()+" se ha guardado correctamente");
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }

@@ -17,7 +17,7 @@ public class PrintAdoptionTicket implements InterfaceAdoptationTicket {
         return ("REFUGIO PATITAS FELICES\n" +
                 "TICKET DE ADOPCIÓN\nDía: " + today +"\n"+
                 "\nDATOS DEL ADOPTANTE: "+
-                "\n \tNombre: " + anAdoption.getNameAdoptant()+ " " + anAdoption.getLastName() +
+                "\n \tNombre: " + anAdoption.getNameAdoptant()+ " " + anAdoption.getLastNameAdopt() +
                 "\n \tEdad: " + anAdoption.getAgeAdoptant()+
                 "\n \tDirección: " + anAdoption.getAdressAdoptant()+
                 "\n"+

@@ -132,9 +132,10 @@ public class AdoptantDAOH2Impl implements DAO<Adoptant> {
     public Integer getId(Adoptant anAdoptant) {
         try {
             Connection conn = H2Connection.getConnection();
-            String id = "SELECT id FROM " + table + " WHERE name = ?";
-            PreparedStatement stmt = conn.prepareStatement(id);
+            String sql = "SELECT id FROM " + table + " WHERE name = ? AND lastname = ?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, anAdoptant.getName());
+            stmt.setString(2, anAdoptant.getLastName()); // ← Este era el problema
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 return rs.getInt("id");

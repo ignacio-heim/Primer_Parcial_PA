@@ -40,11 +40,21 @@ public class ConfirmAdoptionFrame extends JFrame {
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
         buttonsPanel.setLayout(new BoxLayout(buttonsPanel, BoxLayout.Y_AXIS));
 
+        JButton backButton = new JButton("Volver al inicio");
+        backButton.addActionListener(e -> {
+            dispose();
+            new HomeFrame(anEmployee);
+        });
+        backButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        backButton.setMaximumSize(new Dimension(200, 30));
+
+
         JButton downloadButton = new JButton("Descargar Ticket Adopción");
         downloadButton.addActionListener(new ConfirmAdoptionFrame.DownloadTicketPDF());
         downloadButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         downloadButton.setMaximumSize(new Dimension(200, 30));
         buttonsPanel.add(downloadButton);
+
 
         /*
         JButton emailButton = new JButton("Enviar Ticket por Correo");
@@ -53,8 +63,10 @@ public class ConfirmAdoptionFrame extends JFrame {
         emailButton.setMaximumSize(new Dimension(200, 30));
         buttonsPanel.add(emailButton);
         */
+        buttonsPanel.add(backButton);
 
-        add(buttonsPanel, BorderLayout.CENTER); // ahora sí, ambos se ven
+        add(buttonsPanel, BorderLayout.CENTER);
+
 
         setVisible(true);
 

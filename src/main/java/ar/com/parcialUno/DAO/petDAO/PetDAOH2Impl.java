@@ -61,7 +61,10 @@ public class PetDAOH2Impl implements DAO<Pet> {
         try {
             Connection conn = H2Connection.getConnection();
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM " + table);
+            ResultSet rs = stmt.executeQuery(
+                    "SELECT * FROM pet WHERE id NOT IN (SELECT id_pet FROM adoption)"
+            );
+
             while (rs.next()) {
                 String name = rs.getString("name");
                 String birthDate = rs.getString("birthDate");
@@ -69,12 +72,12 @@ public class PetDAOH2Impl implements DAO<Pet> {
                 Integer specie = rs.getInt("specieID");
                 if (specie == 1) {
                     Pet dog = new Dog(name, birthDate, weight, specie);
-                    System.out.println(dog.getName() + " " + dog.getBirthDate());
+//                    System.out.println(dog.getName() + " " + dog.getBirthDate());
                     pets.add(dog);
                 }
                 if (specie == 2) {
                     Pet cat = new Cat(name, birthDate, weight, specie);
-                    System.out.println(cat.getName() + " " + cat.getBirthDate());
+//                    System.out.println(cat.getName() + " " + cat.getBirthDate());
                     pets.add(cat);
                 }
             }
@@ -167,6 +170,39 @@ public class PetDAOH2Impl implements DAO<Pet> {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public List<Pet> getAllAdoptations() {
+        List<Pet> pets = new ArrayList<>();
+        try {
+            Connection conn = H2Connection.getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "SELECT * FROM pet WHERE id IN (SELECT id_pet FROM adoption)"
+            );
+
+            while (rs.next()) {
+                String name = rs.getString("name");
+                String birthDate = rs.getString("birthDate");
+                Double weight = rs.getDouble("weight");
+                Integer specie = rs.getInt("specieID");
+                if (specie == 1) {
+                    Pet dog = new Dog(name, birthDate, weight, specie);
+//                    System.out.println(dog.getName() + " " + dog.getBirthDate());
+                    pets.add(dog);
+                }
+                if (specie == 2) {
+                    Pet cat = new Cat(name, birthDate, weight, specie);
+//                    System.out.println(cat.getName() + " " + cat.getBirthDate());
+                    pets.add(cat);
+                }
+            }
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return pets;
     }
 
 }

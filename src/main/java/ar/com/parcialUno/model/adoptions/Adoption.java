@@ -39,7 +39,7 @@ public class Adoption {
     public String getNameAdoptant() {
         return anAdoptant.getName();
     }
-    public String getLastName() { return anAdoptant.getLastName(); }
+    public String getLastNameAdopt() { return anAdoptant.getLastName(); }
     public Integer getAgeAdoptant() {
         return anAdoptant.getAge();
     }
@@ -66,11 +66,6 @@ public class Adoption {
     public Integer getSpeciePet() {
         return aPet.getSpecie();
     }
-
-    /*
-    public StringBuilder getCaresPet() {
-        return aPet.getCares();
-    }*/
 
     public String getNameEmployee() {
         return anEmployee.getName();

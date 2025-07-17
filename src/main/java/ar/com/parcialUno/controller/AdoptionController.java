@@ -24,9 +24,36 @@ public class AdoptionController {
         }
     }
 
-    public List<String> getAdoptions() {
+    public List<StringBuilder> getAdoptions() {
         try {
             return adoptionService.getAdoptions();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Adoption getAdoption(Integer id) {
+        try {
+            return adoptionService.getAdoption(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Boolean deleteAdoption(Integer id) {
+        try {
+            return adoptionService.deleteAdoption(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Boolean updateAdoptionById(Integer idAdoption, Integer idPet, Adoptant adoptant) {
+        try {
+            return adoptionService.updateAdoptionById(idAdoption, idPet, adoptant);
         } catch (Exception e) {
             e.printStackTrace();
         }

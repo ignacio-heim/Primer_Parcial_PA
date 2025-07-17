@@ -1,5 +1,6 @@
 package ar.com.parcialUno.views;
 
+import ar.com.parcialUno.controller.AdoptionController;
 import ar.com.parcialUno.controller.EmployeeController;
 import ar.com.parcialUno.model.people.Employee;
 
@@ -12,6 +13,8 @@ import java.awt.event.ActionListener;
 public class HomeFrame extends JFrame {
 
     Employee employee;
+    
+    
 
     public HomeFrame(Employee employee) {
 
@@ -30,10 +33,16 @@ public class HomeFrame extends JFrame {
         setVisible(true);
 
         JButton registerButton = new JButton("Registrar Adopción");
-        registerButton.addActionListener(new HomeFrame.RegisterAdoptionWindow());
+        registerButton.addActionListener(new RegisterAdoptionWindow());
         JPanel registerPanel = new JPanel();
         registerPanel.add(registerButton);
         add(registerPanel);
+
+        JButton adoptionButton = new JButton("Adopciones");
+        adoptionButton.addActionListener(new AdoptionWindow());
+        JPanel adoptionPanel = new JPanel();
+        adoptionPanel.add(adoptionButton);
+        add(adoptionPanel);
 
         /*
         JButton petButton = new JButton("Mascotas");
@@ -42,11 +51,7 @@ public class HomeFrame extends JFrame {
         petPanel.add(petButton);
         add(petPanel);
 
-        JButton adoptionButton = new JButton("Adopciones");
-        adoptionButton.addActionListener(new HomeFrame.AdoptionWindow());
-        JPanel adoptionPanel = new JPanel();
-        adoptionPanel.add(adoptionButton);
-        add(adoptionPanel);
+
 
         JButton adoptansButton = new JButton("Adoptantes");
         adoptansButton.addActionListener(new HomeFrame.AdoptansWindow());
@@ -63,20 +68,19 @@ public class HomeFrame extends JFrame {
             arf.setVisible(true);
         }
     }
+    public class AdoptionWindow implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            AdoptionsFrame af = new AdoptionsFrame(employee);
+
+        }
+    }
 
     public class PetWindow implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            PetWindow pw = new PetWindow();
-            //pw.setVisible(true);
         }
-    }
 
-    public class AdoptionWindow implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-
-        }
     }
 
     public class AdoptansWindow implements ActionListener {

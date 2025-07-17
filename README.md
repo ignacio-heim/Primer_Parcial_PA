@@ -58,3 +58,11 @@ Finalmente, el usuario tiene la posibilida de descargar el ticket de la adopció
 8. PDF descargado
 
 ![img_9.png](capturas/img_9.png)
+
+10. Editar Adopciones
+
+![img.png](capturas/img10.png)
+
+11. Se pueden eliminar o modificar adopciones actuales:
+
+![img_1.png](capturas/img_11.png)

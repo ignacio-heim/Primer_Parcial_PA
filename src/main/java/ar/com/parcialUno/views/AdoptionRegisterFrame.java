@@ -81,6 +81,13 @@ public class AdoptionRegisterFrame extends JFrame {
         JPanel registerPanel = new JPanel();
         registerPanel.add(registerButton);
 
+        JButton backButton = new JButton("Volver al inicio");
+        backButton.addActionListener(e -> {
+            dispose();
+            new HomeFrame(anEmployee);
+        });
+        registerPanel.add(backButton);
+
         add(userPanelPets);
         add(userPanelAdoptants);
         add(registerPanel);

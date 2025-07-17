@@ -9,9 +9,9 @@ La funcionalidad de la aplicación consiste en un sistema de registro de adopcio
 El usuario deberá loguearse al sistema con su correo y contraseña. En caso de error, no podrá acceder al sistema.
 Si se podrá crear un nuevo usuario.
 
-La ***funcionalidad principal*** es elegir de una lista ya prestablecida, un animal y adoptante. Luego habrá una opción de confirmar la adopción.
+La ***funcionalidad principal*** es elegir de una lista ya prestablecida, un animal y adoptante. Luego habrá una opción de confirmar la adopción. El usuario tiene la posibilidad de descargar el ticket de la adopción en formato PDF.
 
-Finalmente, el usuario tiene la posibilida de descargar el ticket de la adopción en formato PDF.
+Se agrega para esta etapa, la posibilidad de modificar o eliminar las adopciones vigentes. Esto se explica en las dos últimas imagenes, donde podemos elegir otra mascota o cambiar los datos del adoptante.
 
 ### Estrucutra del proyecto
     /src
